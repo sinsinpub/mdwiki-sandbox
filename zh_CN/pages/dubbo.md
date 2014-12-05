@@ -32,7 +32,7 @@
 * 注意运行要编译JSP的before/backend-micro-service时，需要使用JDK所在的JVM来运行。故一定要调整run-jetty脚本内的JDK路径。
 * 要运行多个后端应用实例需要打开多个控制台会话，并使用不同的配置（服务端口、路径、实例名等）来运行。
 * 例如可以为每个实例创建一个新的子目录，将jetty-runner和WAR复制到其中，并在其中创建一个etc/config.properties配置文件。注意要为dubbo.application.name使用与其它实例不同的值
-* 正常启动后可以使用http://host:port1/path1/greet/hello来访问前端服务，使用http://host:port2/path2/可以访问不用Dubbo协议的后端页面
+* 正常启动后可以使用 http://host:port1/path1/greet/hello 来访问前端服务，使用 http://host:port2/path2/ 可以访问不用Dubbo协议的后端页面
 * 要让Dubbo使用zookeeper注册中心，修改dubbo.registry.address配置之后，在启动应用前事先进入zookeeper/bin用zkServer脚本启动zookeeper即可。zk配置在conf目录，并会创建data目录存储日志和数据
 * 更多Dubbo的使用和配置信息可以参考官方文档：http://alibaba.github.io/dubbo-doc-static/User+Guide-zh.htm ，以及官方FAQ：http://alibaba.github.io/dubbo-doc-static/FAQ-zh.htm
 * 更多jetty-runner用法详细可参考http://www.eclipse.org/jetty/documentation/current/runner.html
